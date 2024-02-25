@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#root {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  /* Full width by default */
+  max-width: 1240px;
+  /* Maximum width of the container */
+  margin: 0 auto;
+  /* Center the container */
+  padding: 0 10px;
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+    /* Less padding on smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+    /* Even less padding on very small devices */
+  }
+}
+
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.navbar__list,
+.navbar__list-mobile {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.navbar__link {
+  color: #083D2D;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.header__phone-link {
+  display: inline-block;
+  /* Allows padding and margin */
+  background-color: #083D2D;
+  /* Example blue background */
+  color: #ffffff;
+  /* White text */
+  padding: 10px 20px;
+  /* Spacing inside the button */
+  border-radius: 5px;
+  /* Rounded corners */
+  text-decoration: none;
+  /* Removes underline */
+  font-weight: bold;
+  /* Makes the text bold */
+  transition: background-color 0.3s, transform 0.2s;
+  /* Smooth background color and transform transition */
+}
+
+.header__phone-link:hover,
+.header__phone-link:focus {
+  background-color: #083D2D;
+  /* Darker shade of blue on hover/focus */
+  color: #ffffff;
+  /* Ensures text color remains white */
+  text-decoration: none;
+  /* Keeps text underline removed */
+  transform: scale(1.05);
+  /* Slightly enlarges the button */
+  outline: none;
+  /* Removes the outline to use custom focus styles */
+}
+
+/* Optional: Add a focus-visible class for keyboard navigation */
+.header__phone-link:focus-visible {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #007bff;
+  /* Adds a distinct focus outline */
+}
+
+
+.navbar__item {
+  font-weight: 500;
+  margin-right: 30px;
+}
+
+.navbar__item:last-child {
+  margin-right: 0;
+}
+
+.menu-toggle {
+  display: none;
+  background: unset;
+  border: unset;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+@media (max-width: 576px) {
+  .navbar-wrapper {
+    flex-direction: column;
+    align-items: center;
+    z-index: 99;
+  }
+
+  .navbar__list {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .logo-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar__list-mobile {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 1s ease-in;
+    /* transform: translateY(100%); */
+  }
+
+  .navbar__item {
+    font-weight: 700;
+    margin-top: 10px;
+    margin-right: 0;
+  }
+
+  .navbar__item:last-child {
+    margin-top: 20px;
+  }
+
+  .tel-link {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .navbar-wrapper {
+    flex-direction: column;
+  }
+
+  .navbar__list {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .logo-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar__list-mobile {
+    margin: 15px 0 0 0;
+  }
+
+  .navbar__item {
+    font-weight: 700;
+    margin-top: 15px;
+  }
+
+  .navbar__item:last-child {
+    margin-top: 20px;
+  }
+
+  .tel-link {
+    display: none;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 1000px) {
+  .navbar__item {
+    font-weight: 700;
+  }
+}
